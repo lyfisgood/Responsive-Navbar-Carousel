@@ -1,0 +1,205 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /*The CSS box-sizing property allows us to include the padding and border in an element's total width and height. */
+  box-sizing: border-box;
+  /*   The text-decoration property specifies the decoration added to text. */
+  text-decoration: none;
+}
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* navbr styling */
+.navbar {
+  position: fixed;
+  background-color: #111;
+  width: 100%;
+  padding: 10px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar .logo a {
+  font-size: 35px;
+  color: #fff;
+}
+.navbar .logo a span {
+  color: crimson;
+  transition: all 0.3s ease;
+}
+.navbar .menu li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+  color: crimson;
+}
+.navbar .menu li {
+  list-style-type: none;
+  display: inline-block;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar.sticky {
+  background-color: crimson;
+}
+.navbar.sticky .menu li a:hover {
+  color: #fff;
+}
+.navbar.sticky .logo a span {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* menu btn styling */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+/* home section styling */
+.home {
+  display: flex;
+  background-color: #111;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1,
+.text-2,
+.text-3 {
+  font-size: 35px;
+}
+
+.home .home-content a {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin-top: 10px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid crimson;
+}
+/* responsive media query */
+@media (max-width: 1104px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 947px) {
+}
+@media (max-width: 947px) {
+  .max-width {
+    padding: 0 50px;
+  }
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    top: 0;
+    background-color: #111;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+    text-align: center;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+}
+
+/* carousel */
+.work .max-width {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.wrapper {
+  width: 100%;
+  z-index: -999;
+  position: relative;
+}
+.carousel {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px; 
+}
+
+.carousel .card{
+  border-radius: 10px;
+}
+
+.carousel .allcard img {
+  border-radius: 10px;
+/*   text-align: center;
+  line-height: 250px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); */
+}
+
+/* .carousel .card-1 {
+  background: #ed1c24;
+}
+.carousel .card-2 {
+  background: #0072bc;
+}
+.carousel .card-3 {
+  background: #39b54a;
+}
+.carousel .card-4 {
+  background: #f26522;
+}
+.carousel .card-5 {
+  background: #630460;
+} */
+.owl-dots {
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot {
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0072bc !important;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: #0072bc !important;
+}
